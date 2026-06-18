@@ -160,11 +160,27 @@ const actionButtonProps = {
   @media (max-width: 50rem) {
     .hero {
       min-height: auto;
+      padding-block-start: 0;
+      /* .hero has overflow: hidden; the media's drop shadow reaches ~68px
+         below the box, so reserve enough room for it to render uncut. */
+      padding-block-end: 5rem;
     }
 
     .hero-bounds {
       grid-template-columns: 1fr;
-      gap: clamp(2rem, 8vw, 3rem);
+      gap: clamp(2.5rem, 10vw, 4rem);
+      align-items: start;
+    }
+
+    .hero-inner {
+      min-height: calc(100svh - var(--sl-nav-height, 3.5rem));
+      justify-content: center;
+      max-width: none;
+      gap: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .hero-inner h1 {
+      font-size: clamp(2rem, 8vw, 2.75rem);
     }
   }
 </style>

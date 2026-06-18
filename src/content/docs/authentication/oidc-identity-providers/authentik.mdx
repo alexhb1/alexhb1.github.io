@@ -174,9 +174,9 @@ The fastest way to test without logging out of your admin account:
 
 Now that basic OIDC is working, you can configure additional features in Grimmory's [OIDC Settings](/authentication/oidc-settings):
 
-- **[User Provisioning](/authentication/oidc-settings#-user-provisioning):** Automatically create Grimmory accounts when users sign in for the first time
+- **[User Provisioning](/authentication/oidc-settings#user-provisioning):** Automatically create Grimmory accounts when users sign in for the first time
 - **[Group Mapping](/authentication/oidc-settings#group-mapping):** Map Authentik groups to Grimmory permissions and library access (Authentik includes groups in the `groups` claim by default, no extra configuration needed)
-- **[OIDC-Only Mode](/authentication/oidc-settings#-oidc-only-mode):** Hide the local login form and redirect everyone to Authentik
+- **[OIDC-Only Mode](/authentication/oidc-settings#oidc-only-mode):** Hide the local login form and redirect everyone to Authentik
 - **[Account Linking](/authentication/oidc-settings#link-existing-local-accounts):** Migrate existing local users to OIDC without losing their data
 
 ---
@@ -191,7 +191,7 @@ Now that basic OIDC is working, you can configure additional features in Grimmor
 
 ### "User Not Provisioned" Error
 
-Auto-provisioning is off by default. Either enable it in [OIDC Settings](/authentication/oidc-settings#-user-provisioning), or create a Grimmory user with a username that exactly matches the Authentik `preferred_username` (case-sensitive).
+Auto-provisioning is off by default. Either enable it in [OIDC Settings](/authentication/oidc-settings#user-provisioning), or create a Grimmory user with a username that exactly matches the Authentik `preferred_username` (case-sensitive).
 
 ### "Invalid Client" Error
 

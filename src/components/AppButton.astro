@@ -67,7 +67,10 @@ const variantClasses = {
   },
 };
 
-const linkRel = target === '_blank' ? (rel ?? 'noopener noreferrer') : rel;
+const linkRel =
+  target === '_blank'
+    ? Array.from(new Set([...(rel?.split(/\s+/).filter(Boolean) ?? []), 'noopener', 'noreferrer'])).join(' ')
+    : rel;
 ---
 
 <a
